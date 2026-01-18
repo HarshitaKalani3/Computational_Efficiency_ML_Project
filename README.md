@@ -45,11 +45,11 @@ Numpy, Cupy, Pandas, Pytorch, Scikit-Learn, Google Colab
     CPU or GPU acceleration
 
 ## Decision Tree Implementation
--- Built from scratch
--- Uses entropy and information gain
--- Uses max_depth, min_samples_split and randomly features are selected along the tree
--- Main Components are : node class, recursive tree growth by its own and level order traversal.
--- Example Output:
+Built from scratch
+Uses entropy and information gain
+Uses max_depth, min_samples_split and randomly features are selected along the tree
+Main Components are : node class, recursive tree growth by its own and level order traversal.
+Example Output:
    Depth 0: Split on 'education-num' at threshold 9
    Depth 1: Split on 'age' at threshold 37
    ...
@@ -69,13 +69,13 @@ Example Output:
    Avg acc on 10 folds: 0.84
 
 ## Hybrid Model: Decision Tree and Neural Network
--- We are giving original features and decision tree predictions as input to it then,
+We are giving original features and decision tree predictions as input to it then,
 Input Layer → 32 → 16 → 1
 Activation: ReLU + Sigmoid
 Loss: Binary Cross Entropy
 Optimizer: Adam
 ### Hybrid k-fold cross-validation
--- In this, we evaluate accuracy.
+In this, we evaluate accuracy.
 Fold 1 Hybrid Accuracy: 0.87
 Fold 2 Hybrid Accuracy: 0.88
 ...
