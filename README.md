@@ -37,51 +37,50 @@ Converted labels to numeric form, removed missing values and one-hot encoded cat
 Numpy, Cupy, Pandas, Pytorch, Scikit-Learn, Google Colab
 
 ## Installation
-   !pip install cupy-cuda12x --upgrade
-   !pip install torch pandas numpy scikit-learn
-### Platform and Python version: 
-    Google Colab(here) , Python Version: 3.8+
-### Hardware; 
-    CPU or GPU acceleration
+   1. !pip install cupy-cuda12x --upgrade
+   2. !pip install torch pandas numpy scikit-learn
+### Platform and Python version: Google Colab(here) , Python Version: 3.8+
+### Hardware: CPU or GPU acceleration
 
 ## Decision Tree Implementation
-Built from scratch
-Uses entropy and information gain
-Uses max_depth, min_samples_split and randomly features are selected along the tree
-Main Components are : node class, recursive tree growth by its own and level order traversal.
-Example Output:
+1. Built from scratch
+2. Uses entropy and information gain
+3. Uses max_depth, min_samples_split and randomly features are selected along the tree
+4. Main Components are : node class, recursive tree growth by its own and level order traversal.
+5. Example Output:
    Depth 0: Split on 'education-num' at threshold 9
    Depth 1: Split on 'age' at threshold 37
    ...
 ### Model Evaluation
-1. Train-Test splitting (70/30):
-Accuracy is computed and confusion matrix is created.
-Example- Accuracy: 0.84
-Confusion Matrix:
-   [tn, fp]
-   [fn, tp]
-2. k-fold Cross-Validation:
-Each fold trains a new decision tree and evaluates on new data
-Example Output:
-   Fold 1 acc: 0.83
-   Fold 2 acc: 0.85
-   ...
-   Avg acc on 10 folds: 0.84
+#### Train-Test splitting (70/30):
+   1. Accuracy is computed and confusion matrix is created.
+   2. Example Output- Accuracy: 0.84
+      Confusion Matrix:
+      [tn, fp]
+      [fn, tp]
+#### k-fold Cross-Validation:
+   1. Each fold trains a new decision tree and evaluates on new data
+   2. Example Output:
+      Fold 1 acc: 0.83
+      Fold 2 acc: 0.85
+      ...
+      Avg acc on 10 folds: 0.84
 
 ## Hybrid Model: Decision Tree and Neural Network
-We are giving original features and decision tree predictions as input to it then,
-Input Layer → 32 → 16 → 1
-Activation: ReLU + Sigmoid
-Loss: Binary Cross Entropy
-Optimizer: Adam
+1. We are giving original features and decision tree predictions as input to it then,
+2. Input Layer → 32 → 16 → 1
+3. Activation: ReLU + Sigmoid
+4. Loss: Binary Cross Entropy
+5. Optimizer: Adam
 ### Hybrid k-fold cross-validation
-In this, we evaluate accuracy.
-Fold 1 Hybrid Accuracy: 0.87
-Fold 2 Hybrid Accuracy: 0.88
-...
-Average Hybrid Accuracy: 0.88
-Decision Tree Accuracy: 0.84
-Hence, we can see that the hybrid model performs better than the decision tree model.
+1. In this, we evaluate accuracy.
+2. Example Output:
+   Fold 1 Hybrid Accuracy: 0.87
+   Fold 2 Hybrid Accuracy: 0.88
+   ...
+   Average Hybrid Accuracy: 0.88
+   Decision Tree Accuracy: 0.84
+   Hence, we can see that the hybrid model performs better than the decision tree model.
 
 ## How To Run
 1. Upload adult.csv to Google Colab.
